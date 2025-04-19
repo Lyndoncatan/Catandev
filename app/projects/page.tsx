@@ -44,6 +44,14 @@ export default function ProjectsPage() {
       image: "/images/data-tracker.jpg",
       url: "https://data-tracker-three.vercel.app/",
     },
+
+    {
+      id: 6,
+      title: "Elemento",
+      description: "Frontend Pixel game,typescript,css,javascript",
+      image: "/images/data-tracker.jpg",
+      url: "https://elemento-game-blush.vercel.app/",
+    },
   ]
 
   const fadeInUp = {
