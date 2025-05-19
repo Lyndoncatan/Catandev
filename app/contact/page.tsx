@@ -128,6 +128,19 @@ export default function ContactPage() {
               </div>
             </div>
 
+           <div className="flex items-start gap-4 mt-6">
+  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[#4ade80] mt-1" fill="currentColor" viewBox="0 0 24 24">
+    <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 5.005 3.675 9.127 8.437 9.878v-6.989h-2.54v-2.729h2.54v-2.076c0-2.507 1.492-3.893 3.775-3.893 1.095 0 2.238.196 2.238.196v2.47h-1.261c-1.245 0-1.63.773-1.63 1.563v1.741h2.773l-.443 2.729h-2.33v6.989C18.325 21.127 22 17.005 22 12z"/>
+  </svg>
+  <div>
+    <h3 className="font-medium text-[#1a3b5d]">Facebook</h3>
+    <Link href="https://www.facebook.com/dondon.catan.359/" target="_blank" className="text-gray-600 hover:text-[#4ade80]">
+      Dondon Catan
+    </Link>
+  </div>
+</div>
+
+
             <div className="mt-12">
               <h3 className="text-xl font-bold text-[#1a3b5d] mb-4">About Me</h3>
               <p className="text-gray-600 mb-4">
@@ -143,6 +156,9 @@ export default function ContactPage() {
                 your web development project.
               </p>
             </div>
+
+           
+
 
             <div className="mt-12">
               <iframe
