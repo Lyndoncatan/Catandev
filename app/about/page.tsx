@@ -189,11 +189,11 @@ export default function AboutPage() {
               </div>
 
               <div>
-                <h3 className="text-xl font-bold text-[#1a3b5d] mb-6">Design & Tools</h3>
+                <h3 className="text-xl font-bold text-[#1a3b5d] mb-6">Backend Development</h3>
                 <div className="space-y-4">
                   <div>
                     <div className="flex justify-between mb-1">
-                      <span className="text-[#1a3b5d] font-medium">Responsive Design</span>
+                      <span className="text-[#1a3b5d] font-medium">Supabase</span>
                       <span className="text-[#4ade80] font-medium">95%</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
@@ -202,7 +202,7 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <div className="flex justify-between mb-1">
-                      <span className="text-[#1a3b5d] font-medium">UI/UX Design</span>
+                      <span className="text-[#1a3b5d] font-medium">Express.js</span>
                       <span className="text-[#4ade80] font-medium">85%</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
@@ -211,7 +211,7 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <div className="flex justify-between mb-1">
-                      <span className="text-[#1a3b5d] font-medium">Git/GitHub</span>
+                      <span className="text-[#1a3b5d] font-medium">Node.js</span>
                       <span className="text-[#4ade80] font-medium">80%</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
