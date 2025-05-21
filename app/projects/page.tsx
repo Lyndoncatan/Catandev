@@ -52,6 +52,22 @@ export default function ProjectsPage() {
       image: "/images/data-tracker.jpg",
       url: "https://elemento-game-blush.vercel.app/",
     },
+
+    {
+      id: 7,
+      title: "Hellodie",
+      description: "Frontend Ecommerce Web,typescript,css,javascript",
+      image: "/images/data-tracker.jpg",
+      url: "https://hellodie-website.vercel.app/",
+    },
+
+    {
+      id: 8,
+      title: "Lhood",
+      description: "Frontend Ecommerce Web,typescript,css,javascript",
+      image: "/images/data-tracker.jpg",
+      url: "https://l-hood-shop.vercel.app/",
+    },
   ]
 
   const fadeInUp = {
