@@ -14,7 +14,7 @@ export default function Home() {
       id: 1,
       title: "Weathery",
       description: "Weather forecast application with analytics dashboard",
-      image: "/images/weathery.jpeg",
+      image: "/images/weathery.png",
       url: "https://weathery-forecast.vercel.app/",
     },
     {
@@ -28,21 +28,21 @@ export default function Home() {
       id: 3,
       title: "Albumoto",
       description: "Music album collection and management application",
-      image: "/images/albumoto.jpg",
+      image: "/images/albumoto.png",
       url: "https://albumoto.vercel.app/",
     },
     {
       id: 4,
       title: "Wonder Game",
       description: "Interactive gaming platform with multiple game options",
-      image: "/images/wonder-game.jpg",
+      image: "/images/wonder-game.png",
       url: "https://wonder-game.vercel.app/",
     },
     {
       id: 5,
       title: "Data Tracker",
       description: "Analytics and data tracking application",
-      image: "/images/data-tracker.jpg",
+      image: "/images/data-tracker.png",
       url: "https://data-tracker-three.vercel.app/",
     },
   ]
