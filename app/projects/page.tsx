@@ -26,7 +26,7 @@ export default function ProjectsPage() {
     {
       id: 3,
       title: "Albumoto",
-      description: "Music album collection and management application",
+      description: "album collection",
       image: "/images/albumoto.png",
       url: "https://albumoto.vercel.app/",
     },
@@ -67,6 +67,14 @@ export default function ProjectsPage() {
       description: "Frontend Ecommerce Web,typescript,css,javascript",
       image: "/images/lhood.png",
       url: "https://l-hood-shop.vercel.app/",
+    },
+
+     {
+      id: 9,
+      title: "Todo List",
+      description: "Frontend Web,typescript,css,javascript",
+      image: "/images/todolist.png",
+      url: "https://todo-list-app-zeta-silk.vercel.app/",
     },
   ]
 
