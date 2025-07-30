@@ -76,6 +76,14 @@ export default function ProjectsPage() {
       image: "/images/todolist.png",
       url: "https://todo-list-app-zeta-silk.vercel.app/",
     },
+
+     {
+      id: 10,
+      title: "Audio Forensic",
+      description: "Frontend API'S Web,typescript,css,javascript",
+      image: "/images/audioforensic.png",
+      url: "https://audio-forensic-model.vercel.app/",
+    },
   ]
 
   const fadeInUp = {
