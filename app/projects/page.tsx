@@ -89,7 +89,7 @@ export default function ProjectsPage() {
       id: 11,
       title: "3rd version Audio Forensic",
       description: "Frontend API'S Web,typescript,css,javascript",
-      image: "/images/audioforensic.png",
+      image: "/images/3rdveraudio.png",
       url: "https://3rd-ver-audio-forensic-model.vercel.app/",
     },
   ]
