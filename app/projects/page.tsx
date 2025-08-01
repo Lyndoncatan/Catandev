@@ -84,6 +84,14 @@ export default function ProjectsPage() {
       image: "/images/audioforensic.png",
       url: "https://audio-forensic-model.vercel.app/",
     },
+
+     {
+      id: 11,
+      title: "3rd version Audio Forensic",
+      description: "Frontend API'S Web,typescript,css,javascript",
+      image: "/images/audioforensic.png",
+      url: "https://3rd-ver-audio-forensic-model.vercel.app/",
+    },
   ]
 
   const fadeInUp = {
