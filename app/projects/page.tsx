@@ -92,6 +92,22 @@ export default function ProjectsPage() {
       image: "/images/3rdveraudio.png",
       url: "https://3rd-ver-audio-forensic-model.vercel.app/",
     },
+
+    {
+      id: 12,
+      title: "Online Examination",
+      description: "Frontend With Supabase Login Authentication ",
+      image: "/images/Onlineexamination.png",
+      url: "https://onlin-examination.vercel.app/",
+    },
+
+    {
+      id: 13,
+      title: "14ver Audio Forensic",
+      description: "Fullstack Python Librosa ",
+      image: "/images/14vaudioforensic.png",
+      url: "https://one4ver-audio-forensic-detector-igmp.onrender.com/",
+    },
   ]
 
   const fadeInUp = {
