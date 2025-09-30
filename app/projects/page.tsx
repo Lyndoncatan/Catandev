@@ -108,6 +108,14 @@ export default function ProjectsPage() {
       image: "/images/14vaudioforensic.png",
       url: "https://one4ver-audio-forensic-detector-igmp.onrender.com/",
     },
+
+    {
+      id: 14,
+      title: "14ver Audio Forensic",
+      description: "Fullstack Python  ",
+      image: "/images/sms-fisher.png",
+      url: "https://sms-fisher.netlify.app",
+    },
   ]
 
   const fadeInUp = {
