@@ -111,11 +111,23 @@ export default function ProjectsPage() {
 
     {
       id: 14,
-      title: "14ver Audio Forensic",
+      title: "SMS Fisher",
       description: "Fullstack Python  ",
       image: "/images/sms-fisher.png",
       url: "https://sms-fisher.netlify.app",
+      
     },
+
+    {
+      id: 15,
+      title: "Compliler ",
+      description: "javascript complier  ",
+      image: "/images/compiler.png",
+      url: "https://compiler-project-mauve.vercel.app/",
+      
+    },
+
+    
   ]
 
   const fadeInUp = {
