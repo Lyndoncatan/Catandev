@@ -69,7 +69,7 @@ export default function ProjectsPage() {
       url: "https://l-hood-shop.vercel.app/",
     },
 
-     {
+    {
       id: 9,
       title: "Todo List",
       description: "Frontend Web,typescript,css,javascript",
@@ -77,7 +77,7 @@ export default function ProjectsPage() {
       url: "https://todo-list-app-zeta-silk.vercel.app/",
     },
 
-     {
+    {
       id: 10,
       title: "Audio Forensic",
       description: "Frontend API'S Web,typescript,css,javascript",
@@ -85,7 +85,7 @@ export default function ProjectsPage() {
       url: "https://audio-forensic-model.vercel.app/",
     },
 
-     {
+    {
       id: 11,
       title: "3rd version Audio Forensic",
       description: "Frontend API'S Web,typescript,css,javascript",
@@ -115,7 +115,7 @@ export default function ProjectsPage() {
       description: "Fullstack Python  ",
       image: "/images/sms-fisher.png",
       url: "https://sms-fisher.netlify.app",
-      
+
     },
 
     {
@@ -124,10 +124,18 @@ export default function ProjectsPage() {
       description: "javascript complier  ",
       image: "/images/compiler.png",
       url: "https://compiler-project-mauve.vercel.app/",
-      
+
     },
 
-    
+    {
+      id: 16,
+      title: "1stver Animal emotion Scanner ",
+      description: "Fullstack Python  ",
+      image: "/images/animal-emotion.png",
+      url: "https://animal-emotion-detector.onrender.com/",
+
+    },
+
   ]
 
   const fadeInUp = {
