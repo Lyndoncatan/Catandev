@@ -136,6 +136,7 @@ export default function ProjectsPage() {
 
     },
 
+    
   ]
 
   const fadeInUp = {
