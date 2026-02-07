@@ -41,10 +41,10 @@ export default function Home() {
       {/* Floating Tech Icons */}
       <FloatingIcons />
 
-      <div className="flex min-h-screen w-full flex-col p-4 md:p-8 relative overflow-hidden z-10 font-sans">
+      <div className="flex min-h-screen w-full flex-col p-4 md:p-8 relative overflow-hidden z-10 font-sans pointer-events-none">
 
         {/* Main Content Area */}
-        <main className="flex flex-1 flex-col justify-center relative z-20 px-4 md:px-0">
+        <main className="flex flex-1 flex-col justify-center relative z-20 px-4 md:px-0 pointer-events-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}

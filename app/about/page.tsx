@@ -4,7 +4,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { ArrowLeft, Code, Database, Globe } from "lucide-react"
 import { motion } from "framer-motion"
-import { GlassCard } from "@/components/glass-card"
+
 import { Button } from "@/components/ui/button"
 
 export default function AboutPage() {

@@ -4,7 +4,7 @@ import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import ProjectCard from "@/components/project-card"
-import AnimatedNavbar from "@/components/animated-navbar"
+
 import { motion } from "framer-motion"
 
 export default function ProjectsPage() {
