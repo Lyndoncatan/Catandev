@@ -136,7 +136,7 @@ export default function ProjectsPage() {
 
     },
 
-    
+
   ]
 
   const fadeInUp = {
@@ -160,26 +160,39 @@ export default function ProjectsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#fdf6e3] bg-grid-pattern">
-      <AnimatedNavbar />
+    <div className="flex min-h-screen w-full flex-col p-4 md:p-8 relative overflow-hidden z-0 font-sans">
+      {/* Geometric Background Mesh */}
+      <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
+        <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-[500px] bg-gradient-to-t from-[var(--accent-color)]/10 to-transparent blur-3xl"></div>
+      </div>
 
-      <div className="container mx-auto px-4 py-32">
-        <Link href="/" className="inline-flex items-center gap-2 text-[#1a3b5d] mb-8">
-          <ArrowLeft className="h-4 w-4" />
-          Back to Home
-        </Link>
-
-        <motion.h1
-          className="text-4xl font-bold text-[#1a3b5d] mb-12"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          My Projects
-        </motion.h1>
+      <div className="container mx-auto relative z-10 max-w-7xl pt-8">
+        <div className="mb-12 flex justify-between items-center">
+          <Link href="/" className="inline-flex items-center gap-2 text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors hover:translate-x-[-4px] duration-300 group">
+            <div className="p-2 rounded-full border border-white/10 bg-white/5 group-hover:border-[var(--accent-color)] transition-colors">
+              <ArrowLeft className="h-4 w-4" />
+            </div>
+            <span className="text-sm font-medium">Back to Home</span>
+          </Link>
+        </div>
 
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <h1 className="text-5xl md:text-7xl font-medium text-[var(--text-primary)] mb-6 tracking-tight leading-none font-display">
+            CATANDEV <span className="text-[var(--text-secondary)]">PROJECT</span>
+          </h1>
+          <p className="text-lg md:text-xl text-[var(--text-secondary)] max-w-2xl font-light border-l border-[var(--accent-color)] pl-6">
+            A collection of my recent work in web development, design, and interactive experiences.
+          </p>
+        </motion.div>
+
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-20"
           variants={staggerContainer}
           initial="hidden"
           animate="visible"
@@ -192,18 +205,19 @@ export default function ProjectsPage() {
         </motion.div>
 
         <motion.div
-          className="text-center mt-12"
+          className="text-center pb-12 border-t border-white/10 pt-12"
           variants={fadeInUp}
           initial="hidden"
           animate="visible"
           transition={{ delay: 0.6 }}
         >
+          <p className="text-[var(--text-secondary)] mb-6">Ready to start your own project?</p>
           <Button
             asChild
             size="lg"
-            className="bg-[#4ade80] hover:bg-[#22c55e] text-white shadow-lg shadow-[#4ade80]/20 transition-all duration-300"
+            className="rounded-none bg-white text-black hover:bg-gray-200 px-10 py-6 text-sm font-semibold tracking-wide hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] transition-all duration-300"
           >
-            <Link href="/">Back to Home</Link>
+            <Link href="/contact">Get in Touch</Link>
           </Button>
         </motion.div>
       </div>

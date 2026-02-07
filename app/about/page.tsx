@@ -2,9 +2,10 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowLeft } from "lucide-react"
-import AnimatedNavbar from "@/components/animated-navbar"
+import { ArrowLeft, Code, Database, Globe } from "lucide-react"
 import { motion } from "framer-motion"
+import { GlassCard } from "@/components/glass-card"
+import { Button } from "@/components/ui/button"
 
 export default function AboutPage() {
   const fadeInUp = {
@@ -17,238 +18,107 @@ export default function AboutPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#fdf6e3] bg-grid-pattern">
-      <AnimatedNavbar />
+    <div className="flex min-h-screen w-full flex-col p-4 md:p-8 relative overflow-hidden z-0 font-sans">
+      {/* Geometric Background Mesh */}
+      <div className="absolute inset-0 z-0 opacity-20">
+        <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-[500px] bg-gradient-to-t from-[var(--accent-color)]/10 to-transparent blur-3xl"></div>
+      </div>
 
-      <div className="container mx-auto px-4 py-32">
-        <Link href="/" className="inline-flex items-center gap-2 text-[#1a3b5d] mb-8">
-          <ArrowLeft className="h-4 w-4" />
-          Back to Home
-        </Link>
-
-        <motion.h1
-          className="text-4xl font-bold text-[#1a3b5d] mb-12"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          About Me
-        </motion.h1>
+      <div className="container mx-auto relative z-10 max-w-6xl pt-8">
+        <div className="mb-12">
+          <Link href="/" className="inline-flex items-center gap-2 text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors hover:translate-x-[-4px] duration-300">
+            <ArrowLeft className="h-4 w-4" />
+            Back to Home
+          </Link>
+        </div>
 
         <motion.div
-          className="grid md:grid-cols-2 gap-12 items-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="mb-20"
+        >
+          <h1 className="text-6xl md:text-8xl font-medium text-[var(--text-primary)] mb-6 tracking-tight leading-none">
+            About <span className="text-[var(--text-secondary)]">Me.</span>
+          </h1>
+          <p className="text-xl md:text-2xl text-[var(--text-secondary)] max-w-2xl font-light">
+            Blending creativity with code to craft immersive digital experiences.
+          </p>
+        </motion.div>
+
+        <motion.div
+          className="grid md:grid-cols-2 gap-16 items-start mb-24"
           variants={fadeInUp}
           initial="hidden"
           animate="visible"
         >
-          <div>
-            <h2 className="text-3xl font-bold text-[#1a3b5d] mb-6">My Story</h2>
-            <p className="text-lg text-[#1a3b5d] mb-6">
-              Hi, I'm Lyndon Domini Catan, a 22-year-old web developer born on January 16, 2003, based in Marikina City,
-              Philippines.
-            </p>
-            <p className="text-lg text-[#1a3b5d] mb-6">
-              I specialize in creating interactive web designs with a focus on frontend development. My passion lies in
-              building modern, responsive, and user-friendly web applications using the latest technologies.
-            </p>
-            <p className="text-lg text-[#1a3b5d]">
-              I believe that great web development is about more than just code—it's about understanding your business
-              goals and creating solutions that help you achieve them.
-            </p>
+          <div className="space-y-8">
+            <div className="border-l border-[var(--accent-color)] pl-6">
+              <h2 className="text-2xl font-medium text-[var(--text-primary)] mb-4">My Story</h2>
+              <p className="text-lg text-[var(--text-secondary)] leading-relaxed mb-6">
+                Hi, I'm <span className="text-[var(--accent-color)]">Lyndon Domini Catan</span>, a 22-year-old web developer
+                from Marikina City, Philippines.
+              </p>
+              <p className="text-lg text-[var(--text-secondary)] leading-relaxed">
+                I specialize in creating interactive web designs with a focus on frontend development. My passion lies in
+                building modern, responsive, and user-friendly web applications using the latest technologies.
+              </p>
+            </div>
+
+            <div className="p-6 border border-white/10 bg-white/5 backdrop-blur-sm">
+              <p className="text-[var(--text-primary)] italic font-light">
+                "I believe that great web development is about more than just code—it's about understanding your business
+                goals and creating solutions that help you achieve them."
+              </p>
+            </div>
           </div>
-          <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
+
+          <div className="relative h-[500px] w-full overflow-hidden grayscale hover:grayscale-0 transition-all duration-700">
             <Image src="/images/team.jpg" alt="Lyndon Domini Catan" fill className="object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
           </div>
         </motion.div>
 
         <motion.div
-          className="mb-16"
+          className="mb-24"
           variants={fadeInUp}
           initial="hidden"
           animate="visible"
           transition={{ delay: 0.2 }}
         >
-          <h2 className="text-3xl font-bold text-[#1a3b5d] mb-8 text-center">My Values</h2>
+          <h2 className="text-4xl font-medium text-[var(--text-primary)] mb-12 text-center tracking-tight">My Values</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-              <div className="h-16 w-16 bg-[#4ade80] rounded-full flex items-center justify-center mb-6 mx-auto transform transition-transform duration-300 hover:rotate-12">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8 text-white"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                  />
-                </svg>
+            {[
+              { title: "Quality", icon: Code, desc: "I take pride in my work and strive to deliver high-quality solutions." },
+              { title: "Innovation", icon: Globe, desc: "Staying up-to-date with the latest tech to deliver innovative solutions." },
+              { title: "Collaboration", icon: Database, desc: "Working closely with clients to ensure the best possible outcome." }
+            ].map((item, index) => (
+              <div key={index} className="border-t border-white/10 pt-6 hover:border-[var(--accent-color)] transition-colors duration-300 group">
+                <div className="mb-6 opacity-80 group-hover:opacity-100 transition-opacity">
+                  <item.icon className="h-8 w-8 text-[var(--text-primary)]" />
+                </div>
+                <h3 className="text-xl font-medium text-[var(--text-primary)] mb-2">{item.title}</h3>
+                <p className="text-[var(--text-secondary)] leading-relaxed">
+                  {item.desc}
+                </p>
               </div>
-              <h3 className="text-xl font-bold text-[#1a3b5d] mb-4 text-center">Quality</h3>
-              <p className="text-[#1a3b5d] text-center">
-                I take pride in my work and strive to deliver high-quality solutions that exceed expectations.
-              </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-              <div className="h-16 w-16 bg-[#4ade80] rounded-full flex items-center justify-center mb-6 mx-auto transform transition-transform duration-300 hover:rotate-12">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8 text-white"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-[#1a3b5d] mb-4 text-center">Innovation</h3>
-              <p className="text-[#1a3b5d] text-center">
-                I stay up-to-date with the latest technologies and best practices to deliver innovative solutions.
-              </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-              <div className="h-16 w-16 bg-[#4ade80] rounded-full flex items-center justify-center mb-6 mx-auto transform transition-transform duration-300 hover:rotate-12">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8 text-white"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-[#1a3b5d] mb-4 text-center">Collaboration</h3>
-              <p className="text-[#1a3b5d] text-center">
-                I work closely with my clients to understand their needs and goals, ensuring the best possible outcome.
-              </p>
-            </div>
+            ))}
           </div>
         </motion.div>
 
         <motion.div
-          className="mb-16"
-          variants={fadeInUp}
-          initial="hidden"
-          animate="visible"
-          transition={{ delay: 0.4 }}
-        >
-          <h2 className="text-3xl font-bold text-[#1a3b5d] mb-8 text-center">My Skills</h2>
-          <div className="bg-white p-8 rounded-lg shadow-md">
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-xl font-bold text-[#1a3b5d] mb-6">Frontend Development</h3>
-                <div className="space-y-4">
-                  <div>
-                    <div className="flex justify-between mb-1">
-                      <span className="text-[#1a3b5d] font-medium">HTML/CSS</span>
-                      <span className="text-[#4ade80] font-medium">95%</span>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-[#4ade80] h-2 rounded-full" style={{ width: "95%" }}></div>
-                    </div>
-                  </div>
-                  <div>
-                    <div className="flex justify-between mb-1">
-                      <span className="text-[#1a3b5d] font-medium">JavaScript</span>
-                      <span className="text-[#4ade80] font-medium">90%</span>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-[#4ade80] h-2 rounded-full" style={{ width: "90%" }}></div>
-                    </div>
-                  </div>
-                  <div>
-                    <div className="flex justify-between mb-1">
-                      <span className="text-[#1a3b5d] font-medium">React</span>
-                      <span className="text-[#4ade80] font-medium">85%</span>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-[#4ade80] h-2 rounded-full" style={{ width: "85%" }}></div>
-                    </div>
-                  </div>
-                  <div>
-                    <div className="flex justify-between mb-1">
-                      <span className="text-[#1a3b5d] font-medium">Next.js</span>
-                      <span className="text-[#4ade80] font-medium">80%</span>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-[#4ade80] h-2 rounded-full" style={{ width: "80%" }}></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-bold text-[#1a3b5d] mb-6">Backend Development</h3>
-                <div className="space-y-4">
-                  <div>
-                    <div className="flex justify-between mb-1">
-                      <span className="text-[#1a3b5d] font-medium">Supabase</span>
-                      <span className="text-[#4ade80] font-medium">95%</span>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-[#4ade80] h-2 rounded-full" style={{ width: "95%" }}></div>
-                    </div>
-                  </div>
-                  <div>
-                    <div className="flex justify-between mb-1">
-                      <span className="text-[#1a3b5d] font-medium">Express.js</span>
-                      <span className="text-[#4ade80] font-medium">85%</span>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-[#4ade80] h-2 rounded-full" style={{ width: "85%" }}></div>
-                    </div>
-                  </div>
-                  <div>
-                    <div className="flex justify-between mb-1">
-                      <span className="text-[#1a3b5d] font-medium">Node.js</span>
-                      <span className="text-[#4ade80] font-medium">80%</span>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-[#4ade80] h-2 rounded-full" style={{ width: "80%" }}></div>
-                    </div>
-                  </div>
-                  <div>
-                    <div className="flex justify-between mb-1">
-                      <span className="text-[#1a3b5d] font-medium">API Integration</span>
-                      <span className="text-[#4ade80] font-medium">85%</span>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-[#4ade80] h-2 rounded-full" style={{ width: "85%" }}></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </motion.div>
-
-        <motion.div
-          className="text-center"
+          className="text-center pb-20"
           variants={fadeInUp}
           initial="hidden"
           animate="visible"
           transition={{ delay: 0.6 }}
         >
-          <Link
-            href="/contact"
-            className="inline-flex items-center justify-center h-12 px-6 font-medium bg-[#4ade80] text-white rounded-md hover:bg-[#22c55e] transition-colors"
-          >
-            Get in Touch
-          </Link>
+          <Button asChild size="lg" className="rounded-none bg-white text-black hover:bg-gray-200 px-10 py-8 text-sm font-semibold tracking-wide">
+            <Link href="/contact">Let's Work Together</Link>
+          </Button>
         </motion.div>
       </div>
     </div>
   )
 }
-
